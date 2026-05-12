@@ -9,9 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-compose up": "docker-compose up -d",
     "docker-compose down": "docker-compose down",
-    "migrate:latest": "knex migrate:latest --knexfile src/database/knex.ts",
+    "migrate:latest": "knex migrate:latest --knexfile src/database/knex.ts && knex seed:run --knexfile src/database/knex.ts",
     "migrate:make": "knex migrate:make --knexfile src/database/knex.ts -x ts",
-    "migrate:rollback": "knex migrate:rollback --knexfile src/database/knex.ts"
+    "migrate:rollback": "knex migrate:rollback --knexfile src/database/knex.ts",
+    "seed:run": "knex seed:run --knexfile src/database/knex.ts"
   },
   "repository": {
     "type": "git",
