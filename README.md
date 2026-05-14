@@ -31,7 +31,7 @@ DB_ROOT_PASSWORD=root_pass
 docker-compose up -d
 ```
 
-4) Rode as migrations (se existirem)
+4) Rode as migrations e seeds (se existirem)
 ```
 npm run migrate:latest
 ```
@@ -49,6 +49,7 @@ npm start
 ## Scripts uteis
 - Subir banco: `docker-compose up -d`
 - Derrubar banco: `docker-compose down`
-- Migrations: `npm run migrate:latest`
+- Migrations + seeds: `npm run migrate:latest`
+- Seeds: `npm run seed:run`
 - Criar migration: `npm run migrate:make`
 - Rollback: `npm run migrate:rollback`

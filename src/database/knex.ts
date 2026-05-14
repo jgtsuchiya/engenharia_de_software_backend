@@ -17,6 +17,9 @@ const config: Knex.Config = {
         tableName: 'knex_migrations',
         directory: path.resolve(__dirname, 'migrations'),
     },
+    seeds: {
+        directory: path.resolve(__dirname, 'seeds'),
+    },
 };
 
 export default knex(config);
