@@ -11,6 +11,12 @@ export async function up(knex: Knex): Promise<void> {
             .references('id')
             .inTable('merchants');
 
+        // ADICIONADO: Coluna para identificar a categoria do produto
+        table
+            .integer('category_id')
+            .unsigned()
+            .notNullable();
+
         table.string('name', 255).notNullable();
 
         table.text('description').notNullable();
