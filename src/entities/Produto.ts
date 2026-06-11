@@ -18,6 +18,9 @@ export class Product {
     @Column({ type: 'bigint', unsigned: true, name: 'merchant_id' })
     merchantId!: string;
 
+    @Column({ type: 'int', unsigned: true, name: 'category_id' })
+    categoryId!: number;
+
     @Column({ type: 'varchar', length: 255 })
     name!: string;
 
