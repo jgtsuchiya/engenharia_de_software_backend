@@ -6,8 +6,6 @@ import { Customer } from '../entities/Cliente';
 import { Product } from '../entities/Produto';
 import { Merchant } from '../entities/Merchant';
 import { PasswordRecovery } from '../entities/PasswordRecovery';
-import { Order } from '../entities/Order';
-import { OrderItem } from '../entities/OrderItem';
 
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
@@ -18,7 +16,7 @@ export const AppDataSource = new DataSource({
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    entities: [Favorito, Customer, Product, Merchant, PasswordRecovery, Order, OrderItem],
+    entities: [Favorito, Customer, Product, Merchant, PasswordRecovery],
     synchronize: false,
 });
 
