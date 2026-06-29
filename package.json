@@ -12,7 +12,8 @@
     "migrate:latest": "knex migrate:latest --knexfile src/database/knex.ts && knex seed:run --knexfile src/database/knex.ts",
     "migrate:make": "knex migrate:make --knexfile src/database/knex.ts -x ts",
     "migrate:rollback": "knex migrate:rollback --knexfile src/database/knex.ts",
-    "seed:run": "knex seed:run --knexfile src/database/knex.ts"
+    "seed:run": "knex seed:run --knexfile src/database/knex.ts",
+    "start:prod": "cp .env.example .env && docker-compose up"
   },
   "repository": {
     "type": "git",

@@ -14,9 +14,9 @@ npm install
 2) Configure as variaveis de ambiente
 - Copie o arquivo base:
 ```
-cp .env_default .env
+cp .env.example .env
 ```
-- Edite o arquivo .env com os valores abaixo (exemplo):
+- Se desejar, edite o arquivo .env com os valores abaixo (exemplo):
 ```
 DB_HOST=localhost
 DB_PORT=3306
@@ -45,6 +45,11 @@ npm run dev
 ```
 npm start
 ```
+- Modo container:
+```
+npm run start:prod
+```
+
 
 ## Scripts uteis
 - Subir banco: `docker-compose up -d`
