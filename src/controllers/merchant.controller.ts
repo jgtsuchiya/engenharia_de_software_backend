@@ -26,7 +26,7 @@ export async function getProfile(req: Request, res: Response): Promise<void> {
 
     try {
         const repo = AppDataSource.getRepository(Merchant);
-        const merchant = await repo.findOne({ where: { id: req.params.id } });
+        const merchant = await repo.findOne({ where: { id: req.params.id as string } });
 
         if (!merchant) {
             res.status(404).json({ error: 'Lojista não encontrado.' });
@@ -48,7 +48,7 @@ export async function updateProfile(req: Request, res: Response): Promise<void> 
 
     try {
         const repo = AppDataSource.getRepository(Merchant);
-        const merchant = await repo.findOne({ where: { id: req.params.id } });
+        const merchant = await repo.findOne({ where: { id: req.params.id as string } });
 
         if (!merchant) {
             res.status(404).json({ error: 'Lojista não encontrado.' });

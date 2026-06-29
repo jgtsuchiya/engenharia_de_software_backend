@@ -100,7 +100,7 @@ export async function removeFavorite(req: Request, res: Response): Promise<void>
 
     try {
         const repo = AppDataSource.getRepository(Favorito);
-        const favorito = await repo.findOne({ where: { customerId, productId } });
+        const favorito = await repo.findOne({ where: { customerId, productId: productId as string  } });
 
         if (!favorito) {
             res.status(404).json({ error: 'Favorito não encontrado.' });
